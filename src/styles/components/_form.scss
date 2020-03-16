@@ -1,0 +1,21 @@
+.form {
+  background: $off-white;
+
+  &__inner{
+    padding: 20px 50px;
+  }
+
+  &__header {
+    background: #06198B;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 2.5rem;
+  }
+}

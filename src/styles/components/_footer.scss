@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: $off-white;
+  align-items: center;
+  color: $grey;
+  font-size: 1.4rem;
+  padding: 0 15%;
+  font-weight: 400;
+
+  &__list {
+    list-style-type: none;
+
+    &__item{
+      display: inline-block;
+      padding: 10px 20px;
+    }
+  }
+}

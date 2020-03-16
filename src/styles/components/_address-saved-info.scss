@@ -1,0 +1,32 @@
+.addressSaved {
+
+  &__title {
+    color: $orange;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 1.3em;
+  }
+
+  &__group {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__result {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 400px;
+  }
+
+  &__label {
+    width: 150px;
+    text-align: right;
+    color: $grey;
+  }
+
+  &__value {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 50px;
+  }
+}

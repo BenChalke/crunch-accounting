@@ -1,3 +1,17 @@
 // Import base SCSS files
 @import './base/settings';
 @import './base/base';
+@import './base/button';
+
+@import './components/header';
+@import './components/crunch-accounting';
+@import './components/form';
+@import './components/form-input';
+@import './components/contact-info';
+@import './components/address-info';
+@import './components/description-info';
+@import './components/contact-saved-info';
+@import './components/address-saved-info';
+@import './components/description-saved-info';
+@import './components/saved-modal';
+@import './components/footer';

@@ -1,0 +1,20 @@
+.button {
+  font-weight: 300;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 5px 20px;
+  border-radius: 2px;
+  margin: 0 3px;
+  font-size: 2rem;
+
+  &--orange {
+    background-color: $orange;
+    color: $white;
+  }
+  
+  &--white {
+    background-color: $white;
+    color: $orange;
+  }
+}

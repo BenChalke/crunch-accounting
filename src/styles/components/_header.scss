@@ -1,0 +1,10 @@
+.header {
+  width: 100%;
+  text-align: center;
+
+  &__image{
+    margin: 0 auto;
+    display: inline-block;
+    max-width: 200px;
+  }
+}

@@ -1,0 +1,29 @@
+.contact {
+  max-width: 800px;
+
+  &__title {
+    color: $orange;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 1.3em;
+  }
+
+  &__group {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__select {
+    border: none;
+    margin-right: 2px;
+  }
+
+  &__checkbox {
+    border: 1px solid $grey;
+    background: none!important;
+    box-shadow: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+  }
+}

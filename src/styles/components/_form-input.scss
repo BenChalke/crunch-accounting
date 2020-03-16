@@ -1,0 +1,28 @@
+.formInput {
+  display: flex;
+  padding: 20px 15px 20px 0;
+  position: relative;
+  flex-grow: 1;
+  max-width: 380px;
+
+  &__label {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  &__input {
+    display: block;
+    position: relative;
+    padding: 10px;
+    flex: 1 1 200px;
+    border: none;
+    border-radius: 2px;
+
+    &::placeholder {
+      color: #E2E2E2;
+    }
+  }
+}
