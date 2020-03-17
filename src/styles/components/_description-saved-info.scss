@@ -1,32 +1,55 @@
 .descriptionSaved {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   &__title {
     color: $orange;
     font-size: 2.2rem;
     font-weight: 400;
     margin-bottom: 1.3em;
+    flex: 1 1 100%;
   }
 
   &__group {
-    display: flex;
-    flex-grow: 1;
+    display: block;
+    flex: 1 1 400px;
+
+    @media screen and (min-width: 650px) {
+      display: flex;
+    }
   }
 
   &__result {
-    display: flex;
+    display: block;
     justify-content: space-between;
-    flex: 1 1 400px;
+    flex: 1 1 450px;
+
+    @media screen and (min-width: 940px) {
+      min-width: 400px;
+      display: flex;
+    }
   }
 
   &__label {
-    width: 150px;
-    text-align: right;
+    text-align: center;
     color: $grey;
+    flex: 0 1 400px;
+
+    @media screen and (min-width: 940px) {
+      max-width: 150px;
+      text-align: right;
+    }
   }
 
   &__value {
     flex-grow: 1;
-    text-align: left;
-    padding-left: 50px;
+    text-align: center;
+    padding-left: 0;
+
+    @media screen and (min-width: 940px) {
+      padding-left: 50px;
+      text-align: left;
+    }
   }
 }

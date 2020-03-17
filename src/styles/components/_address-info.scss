@@ -1,5 +1,5 @@
-.contact {
-  
+.address {
+   
   @media screen and (min-width: 775px) {
     max-width: 50vw;
   }
@@ -18,21 +18,5 @@
       display: flex;
       flex-grow: 1;
     }
-  }
-
-  &__select {
-    border: none;
-    margin-right: 2px;
-    padding-right: 5px;
-    color: $grey;
-  }
-
-  &__checkbox {
-    border: 1px solid $grey;
-    background: none!important;
-    box-shadow: none;
-    width: 20px;
-    height: 20px;
-    margin-left: 20px;
   }
 }

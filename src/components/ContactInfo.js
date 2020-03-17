@@ -9,9 +9,10 @@ const ContactInfo = (props) => (
       <FormInput inputName='firstName' inputType='text' inputLabel='First Name' inputPlaceholder='John'>
       <select className="contact__select" id="firstNameTitle" name="firstNameTitle">
         <option className="select-disabled" value=''>- None</option>
-        <option value="mr">Mr</option>
-        <option value="mrs">Mrs</option>
-        <option value="miss">Miss</option>
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Miss">Miss</option>
+        <option value="Dr">Dr</option>
       </select>
       </FormInput>
 

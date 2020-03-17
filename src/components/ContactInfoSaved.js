@@ -1,6 +1,4 @@
 import React from 'react';
-import FormInput from './FormInput';
-import ContactInfo from './ContactInfo';
 
 const ContactInfoSaved = (props) => {
   return (

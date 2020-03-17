@@ -3,7 +3,11 @@
   padding: 20px 15px 20px 0;
   position: relative;
   flex-grow: 1;
-  // max-width: 380px;
+
+  @media screen and (min-width: 775px) {
+    max-width: 360px;
+    min-width: 320px;
+  }
 
   &__label {
     position: absolute;
@@ -17,10 +21,14 @@
     display: block;
     position: relative;
     padding: 10px;
-    flex: 1 1 200px;
+    flex: 1 1 300px;
     border: none;
     border-radius: 2px;
 
+    &:focus{
+      outline: 1px solid black;
+    }
+    
     &::placeholder {
       color: #E2E2E2;
     }

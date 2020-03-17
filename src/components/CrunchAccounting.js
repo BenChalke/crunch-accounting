@@ -5,15 +5,16 @@ import Form from './Form';
 import SavedModal from './SavedModal';
 
 export default class CrunchAccounting extends React.Component {
-  state = {
-    savedInformation: false,
-    contactInfo: {},
-    addressInfo: {},
-    descriptionInfo: {},
-    errorMessage: '',
-  }
   constructor(props) {
     super(props);
+
+    this.state = {
+      savedInformation: false,
+      contactInfo: {},
+      addressInfo: {},
+      descriptionInfo: {},
+      errorMessage: '',
+    }
 
     this.saveInformation = this.saveInformation.bind(this);
     this.closeSavedModal = this.closeSavedModal.bind(this);
@@ -35,27 +36,27 @@ export default class CrunchAccounting extends React.Component {
     let error = false;
 
     const contactInfo = {
-      firstNameTitle: e.target.elements.firstNameTitle.value.trim(),
-      firstName: e.target.elements.firstName.value.trim(),
-      lastName: e.target.elements.lastName.value.trim(),
-      accountName: e.target.elements.accountName.value.trim(),
-      companyName: e.target.elements.companyName.value.trim(),
-      phone: e.target.elements.phone.value.trim(),
-      fax: e.target.elements.fax.value.trim(),
-      title: e.target.elements.title.value.trim(),
-      email: e.target.elements.email.value.trim(),
-      subscribeEmail: e.target.elements.subscribeEmail.checked,
+      firstNameTitle: e.target.elements.firstNameTitle.value.trim() || '',
+      firstName: e.target.elements.firstName.value.trim() || '',
+      lastName: e.target.elements.lastName.value.trim() || '',
+      accountName: e.target.elements.accountName.value.trim() || '',
+      companyName: e.target.elements.companyName.value.trim() || '',
+      phone: e.target.elements.phone.value.trim() || '',
+      fax: e.target.elements.fax.value.trim() || '',
+      title: e.target.elements.title.value.trim() || '',
+      email: e.target.elements.email.value.trim() || '',
+      subscribeEmail: e.target.elements.subscribeEmail.checked
     }
     
     const addressInfo = {
-      street: e.target.elements.street.value.trim(),
-      city: e.target.elements.city.value.trim(),
-      state: e.target.elements.state.value.trim(),
-      postcode: e.target.elements.postcode.value.trim(),
+      street: e.target.elements.street.value.trim() || '',
+      city: e.target.elements.city.value.trim() || '',
+      state: e.target.elements.state.value.trim() || '',
+      postcode: e.target.elements.postcode.value.trim() || ''
     }
 
     const descriptionInfo = {
-      description: e.target.elements.description.value.trim(),
+      description: e.target.elements.description.value.trim() || ''
     }
 
     //Check for missing description in the description info section

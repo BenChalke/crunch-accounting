@@ -1,6 +1,4 @@
 import React from 'react';
-import DescriptionInfo from './DescriptionInfo';
-// import FormInput from './FormInput';
 
 const DescriptionInfoSaved = (props) => (
   <div className="descriptionSaved">

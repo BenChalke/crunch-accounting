@@ -1,9 +1,14 @@
 .form {
   background: $off-white;
+  position: relative;
   min-height: calc(100vh - 128px);
 
   &__inner{
-    padding: 20px 50px;
+    padding: 20px;
+
+    @media screen and (min-width: 500px) {
+      padding: 20px 50px;
+    }
   }
 
   &__header {
@@ -13,11 +18,46 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+    text-align: center;
+    margin-bottom: 100px;
+    position: relative;
+
+    @media screen and (min-width: 456px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 700px) {
+      text-align: unset;
+      margin-bottom: 0;
+    }
   }
 
   &__title {
     font-weight: 300;
     font-size: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 700px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__action-buttons {
+    position: absolute;
+    bottom: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    @media screen and (min-width: 456px) {
+      bottom: -68px;
+    }
+
+    @media screen and (min-width: 700px) {
+      position: unset;
+    }
   }
 }
 
