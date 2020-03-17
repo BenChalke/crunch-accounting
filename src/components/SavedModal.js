@@ -14,9 +14,9 @@ const SavedModal = (props) => (
       </div>
       <p className="modal__title">Saved</p>
       <p className="modal__subtitle">The contact details have been saved</p>
-      <ContactInfoSaved />  
-      <AddressInfoSaved />
-      <DescriptionInfoSaved />
+      <ContactInfoSaved contactInfo={props.contactInfo} />  
+      <AddressInfoSaved addressInfo={props.addressInfo} />
+      <DescriptionInfoSaved descriptionInfo={props.descriptionInfo} />
     </div>
   </div>
 );

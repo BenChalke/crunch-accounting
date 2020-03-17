@@ -1,5 +1,6 @@
 .form {
   background: $off-white;
+  min-height: calc(100vh - 128px);
 
   &__inner{
     padding: 20px 50px;
@@ -18,4 +19,8 @@
     font-weight: 300;
     font-size: 2.5rem;
   }
+}
+
+.error{
+  color: red;
 }

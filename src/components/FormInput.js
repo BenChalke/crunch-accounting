@@ -1,16 +1,11 @@
 import React from 'react';
 
-export default class FormInput extends React.Component {
-  constructor() {
-    super();
-  }
-  render() {
-    return (
-      <div className="formInput">
-        <label className="formInput__label" htmlFor={this.props.inputName}>{this.props.inputLabel}</label>
-        {this.props.children}
-        <input className="formInput__input" type={this.props.inputType} id={this.props.inputName} name={this.props.inputName} placeholder={this.props.inputPlaceholder} />
-      </div>
-    );
-  }
-}
+const FormInput = (props) => (
+  <div className="formInput">
+    <label className="formInput__label" htmlFor={props.inputName}>{props.inputLabel}</label>
+    {props.children}
+    <input className='formInput__input' type={props.inputType} id={props.inputName} name={props.inputName} placeholder={props.inputPlaceholder} />
+  </div>
+);
+
+export default FormInput;

@@ -4,17 +4,16 @@ import ContactInfo from './ContactInfo';
 import AddressInfo from './AddressInfo';
 import DescriptionInfo from './DescriptionInfo';
 
-export default class Form extends React.Component {
-  render() {
-    return (
-      <div className='form'>
-        <FormHeader saveInformation={this.props.saveInformation} />
-        <div className='form__inner'>
-          <ContactInfo />
-          <AddressInfo />
-          <DescriptionInfo />
-        </div>
-      </div>
-    );
-  }
-}
+const Form = (props) => (
+  <div className='form'>
+    <FormHeader clearInputs={props.clearInputs}/>
+    <div className='form__inner'>
+      {props.errorMessage && <p className="error">{props.errorMessage}</p>}
+      <ContactInfo />
+      <AddressInfo />
+      <DescriptionInfo />
+    </div>
+  </div>
+);
+
+export default Form;
