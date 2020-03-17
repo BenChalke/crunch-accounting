@@ -29,6 +29,20 @@ export default class CrunchAccounting extends React.Component {
   clearInputs() {
     document.querySelector('#createContact').reset();
   }
+  validEmail(email) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  isNumber(value) {
+    if (/^[0-9]*$/.test(value)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   saveInformation(e) {
     e.persist()
     e.preventDefault();
@@ -66,8 +80,8 @@ export default class CrunchAccounting extends React.Component {
     }
 
     //Check for missing inputs in the address info section
-    if(addressInfo['postcode'] === '') {
-      this.setState(() => ({ errorMessage: 'Please enter a postcode' }));
+    if(addressInfo['postcode'] === '' || !this.isNumber(addressInfo['postcode']) || addressInfo['postcode'].length !== 4) {
+      this.setState(() => ({ errorMessage: 'Please enter a valid postcode' }));
       error = true;
     }
 
@@ -92,8 +106,13 @@ export default class CrunchAccounting extends React.Component {
       error = true;
     }
 
-    if(contactInfo['phone'] === '') {
-      this.setState(() => ({ errorMessage: 'Please enter your phone number' }));
+    if(!this.validEmail(contactInfo['email'])) {
+      this.setState(() => ({ errorMessage: 'Please enter a valid email address' }));
+      error = true;
+    }
+
+    if(contactInfo['phone'] === '' || !this.isNumber(contactInfo['phone']) || contactInfo['phone'].length < 8) {
+      this.setState(() => ({ errorMessage: 'Please enter a valid phone number' }));
       error = true;
     }
 
