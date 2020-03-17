@@ -37,8 +37,16 @@
     cursor: pointer;
     padding: 20px;
   }
+
   &__cross {
     position: relative;
+  }
+
+  &__tick {
+    position: absolute;
+    width: 40px;
+    top: 43px;
+    left: 140px;
   }
 }
 

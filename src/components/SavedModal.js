@@ -13,6 +13,7 @@ const SavedModal = (props) => (
         </div>
       </div>
       <p className="modal__title">Saved</p>
+      <img className="modal__tick" src="/images/tick.png" alt="Success Tick" />
       <p className="modal__subtitle">The contact details have been saved</p>
       <ContactInfoSaved contactInfo={props.contactInfo} />  
       <AddressInfoSaved addressInfo={props.addressInfo} />
